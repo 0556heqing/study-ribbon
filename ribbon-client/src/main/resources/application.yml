@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+cluster:
+  nacos:
+    node1: 127.0.0.1:8848
+
+spring:
+  application:
+    name: study-ribbon-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${cluster.nacos.node1}
+        register-enabled: true
+        group: study
+

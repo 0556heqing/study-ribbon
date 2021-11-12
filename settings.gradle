@@ -1,0 +1,5 @@
+rootProject.name = 'study-ribbon'
+include 'ribbon-server1'
+include 'study-server2'
+include 'ribbon-client'
+

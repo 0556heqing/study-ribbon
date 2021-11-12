@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+cluster:
+  nacos:
+    node1: 127.0.0.1:8848
+
+spring:
+  application:
+    name: study-ribbon-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${cluster.nacos.node1}
+        register-enabled: true #如果本地开发的话,不希望注册到Nacos的把这个改为false
+        group: study
+
